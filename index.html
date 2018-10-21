@@ -61,7 +61,7 @@
             <nav class="collapse navbar-collapse" id="primary-menu">
                 <ul class="nav navbar-nav navbar-right">
                     <li class="active" style = "font-size: 30px"><a href="#home-page">Home</a></li>
-                    <li style = "font-size: 30px"><a href="#about-page">DreamOn</a></li>
+                    <li style = "font-size: 30px"><a href="#about-page">Sleep</a></li>
                 </ul>
             </nav>
         </div>
@@ -89,18 +89,17 @@
             <div class="row">
                 <div class="col-xs-12 col-sm-6 col-sm-offset-3 text-center">
                     <div class="page-title">
-                        <h2>sleep.</h2>
+                        <h2>Sleep. You can do it.</h2>
                     </div>
                 </div>
             </div>
             <div class="row">
 <!--Blackbox-->
-                <div id="coordiv" style="width:300px;height:300px;border:0.5px solid" on onmouseout="chronoStop()"></div>
+               
                 <!DOCTYPE html> <!-- BLACK RECTANGLE -->
                 
 <!-- LOWER ZIPPED -->
 <!--HTML DISPLAY ON SCREEN time & buttons-->
-
 
 <!DOCTYPE html>
 <html>
@@ -120,7 +119,7 @@ function clearCoor() {
 </head>
 <body style="margin:0px;">
 
-
+<div id="coordiv" style="width:300px;height:400px;" onmousemove="chronoStop(); alert('///////GO TO SLEEP///////')" onmouseout="chronoStop()"></div>
 
 
 
@@ -129,11 +128,10 @@ function clearCoor() {
 </body>
 </html>
 
-
 <!--Timer -->
 
 <!DOCTYPE html>
-<div class = "page-timer" align = "center" >
+<div class = "page-timer" align = "center"  >
 <span id="chronotime">0:00:00</span>
 
 <form name="chronoForm">
