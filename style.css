@@ -209,11 +209,12 @@ input:-webkit-autofill:focus {
     color: #ffffff;
     height:100px; 
     width:300px; 
-    margin: -20px -50px; 
-    position:left;
+    margin: 170px -20px; 
+    position: center;
     top:50%; 
     left:50%;
     font-size: 50px;
+    text-align: center;
 
 }
 .button.white:hover {
@@ -250,7 +251,7 @@ input:-webkit-autofill:focus {
     bottom: -10px;
     width: 15px;
     height: 15px;
-    font-size: 14px;
+    font-size: 10px;
 }
 
 /**
@@ -399,8 +400,8 @@ input:-webkit-autofill:focus {
 }
 
 .header-text h2 { /*SLEEPING, PERSONALIZED */
-    margin-bottom: 50px;
-    font-size: 30px;
+    margin-bottom: 10px;
+    font-size: 23px;
 }
 
 .header-text .button {
