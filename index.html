@@ -76,9 +76,9 @@
         <div class="container">
             <div class="row v-center">
                 <div class="col-xs-9 col-md-7 header-text">
-                    <h2 class>Sleeping, Personalized</h2>
+                    <h2 class><i>Sleeping</i></h2>
                     <p></p>
-                    <a href="#about-page" class="button white">Sleep</a> <!--BEGIN BUTTON CLICKED-->
+                    <a href="#about-page" onclick="chronoStart()" class="button white">Sleep</a> <!--BEGIN BUTTON CLICKED-->
             </div>
         </div>
     </header>
@@ -97,10 +97,9 @@
                 <!DOCTYPE html>
 <!-- -----------------------------------------------LOWER ZIPPED -->
 
-<!-- this script got from www.htmlbestcodes.com-Coded by: Krishna Eydat -->
 <span id="chronotime">0:00:00:00</span>
 <form name="chronoForm">
-    <input type="button" name="startstop" value="start!" onClick="chronoStart()" />
+    <input type="button" name="startstop" value="start!" onClick="chronoStop()" /> <!-- EDITED original is chronoStart() -->
     <input type="button" name="reset" value="reset!" onClick="chronoReset()" />
 </form>
 
@@ -118,7 +117,7 @@ function chrono(){
     var msec = diff.getMilliseconds()
     var sec = diff.getSeconds()
     var min = diff.getMinutes()
-    var hr = diff.getHours()-1
+    var hr = diff.getHours()-19
     if (min < 10){
         min = "0" + min
     }
@@ -173,7 +172,10 @@ function chronoStop(){
                 <div class="col-xs-12 col-sm-6 col-md-4">
                     <div class="box">
                         <div class="box-icon">
+                           <div class="box-icon">
                             <img src="images/portfolio-icon-1.png" alt="">
+                        </div>
+                        <h3>Creative Design</h3>
 
                         </div>
                         <h3>Creative Design</h3>
