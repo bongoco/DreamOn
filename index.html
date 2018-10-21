@@ -94,8 +94,8 @@
                 </div>
             </div>
             <div class="row">
-<!--MOUSE LEAVER FUNCTION LOWER-->
-                <div id="coordiv" style="width:600px;height:50px;border:0.5px solid" on onmouseout="chronoStop()"></div>
+<!--Blackbox-->
+                <div id="coordiv" style="width:300px;height:300px;border:0.5px solid" on onmouseout="chronoStop()"></div>
                 <!DOCTYPE html> <!-- BLACK RECTANGLE -->
                 
 <!-- LOWER ZIPPED -->
@@ -130,15 +130,15 @@ function clearCoor() {
 </html>
 
 
-<!--MOUSE LEAVER FUNCTION UPPER -->
+<!--Timer -->
 
 <!DOCTYPE html>
 <div class = "page-timer" align = "center" >
 <span id="chronotime">0:00:00</span>
 
 <form name="chronoForm">
-    <input class = "button white" name="startstop" value="Stop" onClick="chronoStop()" /> <!-- EDITED original is chronoStart() -->
-    <input class = "button white" name="reset" value="Reset" onClick="chronoReset()" />
+    <input class = "button timer" name="startstop" value="Stop" onClick="chronoStop()" /> <!-- EDITED original is chronoStart() -->
+    <input class = "button timer" name="reset" value="Reset" onClick="chronoReset()" />
 </form>
 
 </div>
@@ -189,11 +189,11 @@ function chronoContinue(){
     chrono()
 }
 function chronoReset(){
-    document.getElementById("chronotime").innerHTML = "0:00:00:000"
+    document.getElementById("chronotime").innerHTML = "0:00:00"
     start = new Date()
 }
 function chronoStopReset(){
-    document.getElementById("chronotime").innerHTML = "0:00:00:000"
+    document.getElementById("chronotime").innerHTML = "0:00:00"
     document.chronoForm.startstop.onclick = chronoStart
 }
 function chronoStop(){
