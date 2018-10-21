@@ -1,32 +1,3 @@
-/*-----------------------------------------------------------------------------------
-Template Name: New HTML5 Template,
-Template URI: http://www.themectg.com
-Description: This is html5 template
-Author: Themectg
-Author URI: http://www.themectg.com
-Version: 1.0
------------------------------------------------------------------------------------
-CSS INDEX
-===================
-1. Google font
-2. Theme Default CSS
-3. Helper-class
-4. Button-style
-5. Mainmenu-area
-6. Section-Background
-7. Header-style
-8. Headline-style
-9. Skills-area
-10. Service-area
-11. Work-area
-12. Team-area
-13. Bar-effect-css
-14. Masp style
-15. Form-style
-16. Scroll-To-Top-Button
-17. Preloader-css
------------------------------------------------------------------------------------*/
-
 /*-----------------
 1. Google font
 ------------------*/
@@ -68,7 +39,7 @@ h2 {
 }
 h3,
 h4,
-h5,
+h5, 
 h6 {
     margin: 0 0 10px;
     font-weight: 600;
@@ -77,14 +48,15 @@ h6 {
 html,
 body {
     height: 100%
+    min-height: 100%;
 }
 
 body {
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 150px; /** EDIT ALL THE SIZE OF THE BODY TEX **/
     line-height: 1.8;
-    color: #515656;
+    color: #ffffff;
 }
 
 
@@ -183,6 +155,7 @@ input:-webkit-autofill:focus {
 
 .gray-bg {
     background-color: #000000;
+    min-height: 700px; /* CONTROL SIZE OF SECOND PAGE*/
 }
 
 /**
@@ -201,7 +174,6 @@ input:-webkit-autofill:focus {
     -webkit-box-shadow: 2px 5px 20px -5px rgba(0, 0, 0, 0.1);
     box-shadow: 2px 5px 20px -5px rgba(0, 0, 0, 0.1);
 }
-
 .button.white,
 
 .button:hover { /*COLOR OF THE BEGIN BUTTON*/
@@ -232,6 +204,7 @@ input:-webkit-autofill:focus {
 
 .page-title {
     margin-bottom: 60px;
+    margin-top: -100px;      /* SLEEP. MOVEMENT */
 }
 
 .page-title h2 {
@@ -241,18 +214,6 @@ input:-webkit-autofill:focus {
     padding-bottom: 20px;
 }
 
-.page-title h2:after {
-    content: "\e675";
-    font-family: 'themify';
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    bottom: -10px;
-    width: 15px;
-    height: 15px;
-    font-size: 10px;
-}
 
 /**
 *Box-style
@@ -409,6 +370,14 @@ input:-webkit-autofill:focus {
 }
 
 /***
+PAGE TIMER
+***/
+.page-timer {
+    margin-bottom: 60px;
+    margin-top: 100px; 
+}
+
+/***
 *FOOTER BOTTOM OF PAGE
 ***/
 
@@ -417,9 +386,7 @@ input:-webkit-autofill:focus {
     z-index: 1;
 }
 
-.footer-bg {
-   background-image: url("images/mountains.jpg");
-}
+.footer-bg,
 
 .footer-top {
     margin-bottom: 0px;
