@@ -60,8 +60,8 @@
             <!--Logo/-->
             <nav class="collapse navbar-collapse" id="primary-menu">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a href="#home-page">Home</a></li>
-                    <li><a href="#about-page">DreamOn</a></li>
+                    <li class="active" style = "font-size: 30px"><a href="#home-page">Home</a></li>
+                    <li style = "font-size: 30px"><a href="#about-page">DreamOn</a></li>
                 </ul>
             </nav>
         </div>
@@ -94,15 +94,55 @@
                 </div>
             </div>
             <div class="row">
-                <!DOCTYPE html>
-<!-- -----------------------------------------------LOWER ZIPPED -->
+<!--MOUSE LEAVER FUNCTION LOWER-->
+                <div id="coordiv" style="width:600px;height:50px;border:0.5px solid" on onmouseout="chronoStop()"></div>
+                <!DOCTYPE html> <!-- BLACK RECTANGLE -->
+                
+<!-- LOWER ZIPPED -->
+<!--HTML DISPLAY ON SCREEN time & buttons-->
 
-<span id="chronotime">0:00:00:00</span>
+
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function myFunction(e) {
+    x = e.clientX;
+    y = e.clientY;
+    coor = "Coordinates: (" + x + "," + y + ")";
+    document.getElementById("demo").innerHTML = coor
+}
+
+function clearCoor() {
+    document.getElementById("demo").innerHTML = "";
+}
+</script>
+</head>
+<body style="margin:0px;">
+
+
+
+
+
+<p id="demo"></p>
+
+</body>
+</html>
+
+
+<!--MOUSE LEAVER FUNCTION UPPER -->
+
+<!DOCTYPE html>
+<div class = "page-timer" align = "center" >
+<span id="chronotime">0:00:00</span>
+
 <form name="chronoForm">
-    <input type="button" name="startstop" value="start!" onClick="chronoStop()" /> <!-- EDITED original is chronoStart() -->
-    <input type="button" name="reset" value="reset!" onClick="chronoReset()" />
+    <input class = "button white" name="startstop" value="Stop" onClick="chronoStop()" /> <!-- EDITED original is chronoStart() -->
+    <input class = "button white" name="reset" value="Reset" onClick="chronoReset()" />
 </form>
 
+</div>
+<!-- JAVASCRIPT STARTS HERE-->
 <script language="JavaScript">
 <!--
 var startTime = 0
@@ -130,18 +170,18 @@ function chrono(){
     else if(msec < 100){
         msec = "0" +msec
     }
-    document.getElementById("chronotime").innerHTML = hr + ":" + min + ":" + sec + ":" + msec
+    document.getElementById("chronotime").innerHTML = hr + ":" + min + ":" + sec
     timerID = setTimeout("chrono()", 10)
 }
 function chronoStart(){
-    document.chronoForm.startstop.value = "stop!"
+    document.chronoForm.startstop.value = "Start"
     document.chronoForm.startstop.onclick = chronoStop
     document.chronoForm.reset.onclick = chronoReset
     start = new Date()
     chrono()
 }
 function chronoContinue(){
-    document.chronoForm.startstop.value = "stop!"
+    document.chronoForm.startstop.value = "Stop"
     document.chronoForm.startstop.onclick = chronoStop
     document.chronoForm.reset.onclick = chronoReset
     start = new Date()-diff
@@ -157,7 +197,7 @@ function chronoStopReset(){
     document.chronoForm.startstop.onclick = chronoStart
 }
 function chronoStop(){
-    document.chronoForm.startstop.value = "start!"
+    document.chronoForm.startstop.value = "Start"
     document.chronoForm.startstop.onclick = chronoContinue
     document.chronoForm.reset.onclick = chronoStopReset
     clearTimeout(timerID)
@@ -165,27 +205,8 @@ function chronoStop(){
 //-->
 </script>
 
+<!--UPPER ZIPPED-->
 
-
-
-<!-- ----------------------------------------------UPPER ZIPPED-->
-                <div class="col-xs-12 col-sm-6 col-md-4">
-                    <div class="box">
-                        <div class="box-icon">
-                           <div class="box-icon">
-                            <img src="images/portfolio-icon-1.png" alt="">
-                        </div>
-                        <h3>Creative Design</h3>
-
-                        </div>
-                        <h3>Creative Design</h3>
-
-                    </div>
-                </div>
-
-
-            </div>
-        </div>
     </section>
 
 
